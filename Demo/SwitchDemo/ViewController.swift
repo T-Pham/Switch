@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         mySwitch.tintColor = UIColor.purpleColor()
         mySwitch.disabledColor = mySwitch.tintColor.colorWithAlphaComponent(0.2)
         mySwitch.sizeToFit()
-        mySwitch .addTarget(self, action: #selector(ViewController.switchDidChangeValue(_:)), forControlEvents: .ValueChanged)
+        mySwitch.addTarget(self, action: #selector(ViewController.switchDidChangeValue(_:)), forControlEvents: .ValueChanged)
         view.addSubview(mySwitch)
     }
 
