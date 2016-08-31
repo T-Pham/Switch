@@ -31,7 +31,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZlD-2n-08Y" customClass="Switch" customModule="Switch">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZlD-2n-08Y" customClass="Switch" customModule="RoundedSwitch">
                                 <rect key="frame" x="35" y="100" width="250" height="41.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.99215686270000003" green="0.29411764709999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,7 +56,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-0v-keh" customClass="Switch" customModule="Switch">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-0v-keh" customClass="Switch" customModule="RoundedSwitch">
                                 <rect key="frame" x="87" y="192" width="145" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
