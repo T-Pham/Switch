@@ -1,5 +1,5 @@
 target 'SwitchDemo' do
   use_frameworks!
 
-  pod 'Switch', :path => "../"
+  pod 'RoundedSwitch', :path => "../"
 end

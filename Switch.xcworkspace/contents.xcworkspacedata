@@ -17,7 +17,7 @@
       location = "group:LICENSE">
    </FileRef>
    <FileRef
-      location = "group:Switch.podspec">
+      location = "group:RoundedSwitch.podspec">
    </FileRef>
    <FileRef
       location = "group:Demo/Pods/Pods.xcodeproj">
