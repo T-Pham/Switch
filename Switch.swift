@@ -6,25 +6,25 @@
 
 import UIKit
 
-@IBDesignable class Switch: UIControl {
+@IBDesignable public class Switch: UIControl {
 
-    private let backgroundLayer = RoundLayer()
-    private let switchLayer = RoundLayer()
+    let backgroundLayer = RoundLayer()
+    let switchLayer = RoundLayer()
 
-    private var previousPoint: CGPoint?
-    private var switchLayerLeftPosition: CGPoint?
-    private var switchLayerRightPosition: CGPoint?
+    var previousPoint: CGPoint?
+    var switchLayerLeftPosition: CGPoint?
+    var switchLayerRightPosition: CGPoint?
 
-    static private let labelFactory: () -> UILabel = {
+    static let labelFactory: () -> UILabel = {
         let label = UILabel()
         label.textAlignment = .Center
         return label
     }
 
-    let leftLabel = labelFactory()
-    let rightLabel = labelFactory()
+    public let leftLabel = labelFactory()
+    public let rightLabel = labelFactory()
 
-    @IBInspectable var leftText: String? {
+    @IBInspectable public var leftText: String? {
         get {
             return leftLabel.text
         }
@@ -34,7 +34,7 @@ import UIKit
         }
     }
 
-    @IBInspectable var rightText: String? {
+    @IBInspectable public var rightText: String? {
         get {
             return rightLabel.text
         }
@@ -44,7 +44,7 @@ import UIKit
         }
     }
 
-    @IBInspectable var rightSelected: Bool = false {
+    @IBInspectable public var rightSelected: Bool = false {
         didSet {
             reloadSwitchLayerPosition()
             reloadLabelsTextColor()
@@ -52,25 +52,25 @@ import UIKit
         }
     }
 
-    @IBInspectable var disabledColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var disabledColor: UIColor = UIColor.lightGrayColor() {
         didSet {
             backgroundLayer.borderColor = disabledColor.CGColor
             reloadLabelsTextColor()
         }
     }
 
-    override var tintColor: UIColor! {
+    override public var tintColor: UIColor! {
         didSet {
             switchLayer.borderColor = tintColor.CGColor
             reloadLabelsTextColor()
         }
     }
 
-    private var touchBegan = false
-    private var touchBeganInSwitchLayer = false
-    private var touchMoved = false
+    var touchBegan = false
+    var touchBeganInSwitchLayer = false
+    var touchMoved = false
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -80,7 +80,7 @@ import UIKit
         setup()
     }
 
-    private func setup() {
+    func setup() {
         backgroundLayer.backgroundColor = UIColor.whiteColor().CGColor
         backgroundLayer.borderColor = disabledColor.CGColor
         backgroundLayer.borderWidth = 1
@@ -95,13 +95,13 @@ import UIKit
         reloadLabelsTextColor()
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         leftLabel.frame = CGRectMake(0, 0, bounds.size.width / 2, bounds.size.height)
         rightLabel.frame = CGRectMake(bounds.size.width / 2, 0, bounds.size.width / 2, bounds.size.height)
     }
 
-    override func layoutSublayersOfLayer(layer: CALayer) {
+    override public func layoutSublayersOfLayer(layer: CALayer) {
         super.layoutSublayersOfLayer(layer)
         guard layer == self.layer else {
             return
@@ -117,14 +117,14 @@ import UIKit
         reloadSwitchLayerPosition()
     }
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         touchBegan = true
         previousPoint = touches.first!.locationInView(self)
         touchBeganInSwitchLayer = switchLayer.containsPoint(switchLayer.convertPoint(previousPoint!, fromLayer: layer))
     }
 
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesMoved(touches, withEvent: event)
         touchMoved = true
         guard touchBeganInSwitchLayer else {
@@ -137,7 +137,7 @@ import UIKit
         previousPoint = point
     }
 
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesEnded(touches, withEvent: event)
         guard touchBegan else {
             return
@@ -153,7 +153,7 @@ import UIKit
         touchMoved = false
     }
 
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    override public func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
         super.touchesCancelled(touches, withEvent: event)
         previousPoint = nil
         reloadSwitchLayerPosition()
@@ -162,26 +162,26 @@ import UIKit
         touchMoved = false
     }
 
-    override func sizeThatFits(size: CGSize) -> CGSize {
+    override public func sizeThatFits(size: CGSize) -> CGSize {
         let labelSize = CGSizeMake((size.width - 3 * size.height / 2) / 2, size.height)
         return desiredSizeForLeftSize(leftLabel.sizeThatFits(labelSize), rightSize: rightLabel.sizeThatFits(labelSize))
     }
 
-    override func intrinsicContentSize() -> CGSize {
+    override public func intrinsicContentSize() -> CGSize {
         return desiredSizeForLeftSize(leftLabel.intrinsicContentSize(), rightSize: rightLabel.intrinsicContentSize())
     }
 
-    private func desiredSizeForLeftSize(leftSize: CGSize, rightSize: CGSize) -> CGSize {
+    func desiredSizeForLeftSize(leftSize: CGSize, rightSize: CGSize) -> CGSize {
         let height = max(leftSize.height, rightSize.height)
         return CGSizeMake(max(leftSize.width, rightSize.width) * 2 + 3 * height / 2, height)
     }
 
-    private func reloadLabelsTextColor() {
+    func reloadLabelsTextColor() {
         leftLabel.textColor = rightSelected ? disabledColor : tintColor
         rightLabel.textColor = rightSelected ? tintColor : disabledColor
     }
 
-    private func reloadSwitchLayerPosition() {
+    func reloadSwitchLayerPosition() {
         guard let switchLayerLeftPosition = switchLayerLeftPosition, switchLayerRightPosition = switchLayerRightPosition else {
             return
         }
@@ -189,9 +189,9 @@ import UIKit
     }
 }
 
-private class RoundLayer: CALayer {
+class RoundLayer: CALayer {
 
-    private override func layoutSublayers() {
+    override func layoutSublayers() {
         super.layoutSublayers()
         cornerRadius = bounds.size.height / 2
     }

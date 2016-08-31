@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwitchDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using the Interface Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkz-Ua-abU">
+                                <rect key="frame" x="50" y="28" width="219" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Width &amp; Height Constrains:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8h-5t-EMf">
+                                <rect key="frame" x="16" y="64" width="248" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZlD-2n-08Y" customClass="Switch" customModule="Switch">
+                                <rect key="frame" x="35" y="100" width="250" height="41.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.99215686270000003" green="0.29411764709999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZlD-2n-08Y" secondAttribute="height" multiplier="6:1" id="Ul0-sf-rDN"/>
+                                    <constraint firstAttribute="width" constant="250" id="vvl-mq-yce"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="leftText" value="Cat"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightText" value="Dog"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                        <color key="value" red="0.78039217000000005" green="0.92549020049999997" blue="0.98431372640000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="switchDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="QAB-fo-Hl5"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using Intrinsic Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Z1-Rh-4bt">
+                                <rect key="frame" x="16" y="156" width="151" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-0v-keh" customClass="Switch" customModule="Switch">
+                                <rect key="frame" x="87" y="192" width="145" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="leftText" value="Apple"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rightSelected" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightText" value="Orange"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="switchDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="gra-Ms-90R"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programatically with sizeToFit()" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64h-76-Wra">
+                                <rect key="frame" x="30" y="227" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch a switch to see it switches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0I-qk-XSd">
+                                <rect key="frame" x="32" y="444" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="64h-76-Wra" firstAttribute="top" secondItem="CpA-0v-keh" secondAttribute="bottom" constant="15" id="9Tc-n2-xXQ"/>
+                            <constraint firstItem="Bkz-Ua-abU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9nf-eG-SmX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T0I-qk-XSd" secondAttribute="bottom" constant="15" id="BB8-Nw-5CQ"/>
+                            <constraint firstItem="Bkz-Ua-abU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Lt2-c4-31H"/>
+                            <constraint firstItem="2Z1-Rh-4bt" firstAttribute="leading" secondItem="t8h-5t-EMf" secondAttribute="leading" id="Oza-9o-GfY"/>
+                            <constraint firstItem="ZlD-2n-08Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RpC-Gd-ckL"/>
+                            <constraint firstItem="t8h-5t-EMf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bzF-hm-KG6"/>
+                            <constraint firstItem="CpA-0v-keh" firstAttribute="centerX" secondItem="ZlD-2n-08Y" secondAttribute="centerX" id="dyT-4k-L2f"/>
+                            <constraint firstItem="t8h-5t-EMf" firstAttribute="top" secondItem="Bkz-Ua-abU" secondAttribute="bottom" constant="15" id="eTF-GW-ZUM"/>
+                            <constraint firstItem="64h-76-Wra" firstAttribute="centerX" secondItem="Bkz-Ua-abU" secondAttribute="centerX" id="ehP-DN-pln"/>
+                            <constraint firstItem="CpA-0v-keh" firstAttribute="top" secondItem="2Z1-Rh-4bt" secondAttribute="bottom" constant="15" id="gDL-nj-789"/>
+                            <constraint firstItem="ZlD-2n-08Y" firstAttribute="top" secondItem="t8h-5t-EMf" secondAttribute="bottom" constant="15" id="tg1-X3-4je"/>
+                            <constraint firstItem="2Z1-Rh-4bt" firstAttribute="top" secondItem="ZlD-2n-08Y" secondAttribute="bottom" constant="15" id="wWg-2r-THu"/>
+                            <constraint firstItem="T0I-qk-XSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xa6-PG-epF"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="sectionHeaderLabel" destination="64h-76-Wra" id="sm5-8c-xba"/>
+                        <outlet property="statusLabel" destination="T0I-qk-XSd" id="BFH-Ft-fO0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

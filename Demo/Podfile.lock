@@ -1,0 +1,16 @@
+PODS:
+  - Switch (1.0.0)
+
+DEPENDENCIES:
+  - Switch (from `../`)
+
+EXTERNAL SOURCES:
+  Switch:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Switch: dec70aadf4d1adf68f1d85cf29c3aab7e233b6d6
+
+PODFILE CHECKSUM: a5a1d2be985da07732ebaeb633ec3fc61830ad40
+
+COCOAPODS: 1.0.1

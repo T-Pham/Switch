@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Switch.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Demo/SwitchDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:.gitignore">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:Switch.podspec">
+   </FileRef>
+   <FileRef
+      location = "group:Demo/Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
