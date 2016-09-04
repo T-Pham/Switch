@@ -1,3 +1,12 @@
+```
+'   :::===  :::  ===  === ::: :::==== :::===== :::  ===
+'   :::     :::  ===  === ::: :::==== :::      :::  ===
+'    =====  ===  ===  === ===   ===   ===      ========
+'       ===  ===========  ===   ===   ===      ===  ===
+'   ======    ==== ====   ===   ===    ======= ===  ===
+'                                                              
+```
+
 # Switch
 
 [![GitHub issues](https://img.shields.io/github/issues/T-Pham/Switch.svg?style=flat-square)](https://github.com/T-Pham/Switch/issues)
@@ -29,6 +38,8 @@ To run the demo project:
 Either config the switch in the Interface Builder or programatically as follow:
 
 ```swift
+import Switch
+...
 let mySwitch = Switch()
 mySwitch.leftText = "Windows"
 mySwitch.rightText = "Mac"
@@ -38,6 +49,10 @@ mySwitch.disabledColor = mySwitch.tintColor.colorWithAlphaComponent(0.2)
 mySwitch.sizeToFit()
 mySwitch.addTarget(self, action: #selector(ViewController.switchDidChangeValue(_:)), forControlEvents: .ValueChanged)
 ```
+
+Please note that the module name is `Switch`. However, when installed with CocoaPods, it is `RoundedSwitch`.
+
+Please see the [Reference Documentation](http://cocoadocs.org/docsets/RoundedSwitch) for details.
 
 ## Installation
 
