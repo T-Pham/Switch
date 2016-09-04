@@ -6,6 +6,7 @@
 
 import UIKit
 
+/// A switch control
 @IBDesignable public class Switch: UIControl {
 
     let backgroundLayer = RoundLayer()
@@ -21,9 +22,13 @@ import UIKit
         return label
     }
 
+    /// The label on the left. Don't set the `textColor` and `text` properties on this label. Set them on the `leftText`, `tintColor` and `disabledColor` properties of the switch instead.
     public let leftLabel = labelFactory()
+
+    /// The label on the right. Don't set the `textColor` and `text` properties on this label. Set them on the `rightText`, `tintColor` and `disabledColor` properties of the switch instead.
     public let rightLabel = labelFactory()
 
+    /// Text for the label on the left. Setting this property instead of the `text` property of the `leftLabel` to trigger Auto Layout automatically.
     @IBInspectable public var leftText: String? {
         get {
             return leftLabel.text
@@ -34,6 +39,7 @@ import UIKit
         }
     }
 
+    /// Text for the label on the right. Setting this property instead of the `text` property of the `rightLabel` to trigger Auto Layout automatically.
     @IBInspectable public var rightText: String? {
         get {
             return rightLabel.text
@@ -44,6 +50,7 @@ import UIKit
         }
     }
 
+    /// True when the right value is selected, false when the left value is selected. When this property is changed, the UIControlEvents.ValueChanged is fired.
     @IBInspectable public var rightSelected: Bool = false {
         didSet {
             reloadSwitchLayerPosition()
@@ -52,6 +59,7 @@ import UIKit
         }
     }
 
+    /// The color used for the unselected text and the background border.
     @IBInspectable public var disabledColor: UIColor = UIColor.lightGrayColor() {
         didSet {
             backgroundLayer.borderColor = disabledColor.CGColor
@@ -59,6 +67,7 @@ import UIKit
         }
     }
 
+    /// The color used for the selected text and the switch border.
     override public var tintColor: UIColor! {
         didSet {
             switchLayer.borderColor = tintColor.CGColor
@@ -70,6 +79,7 @@ import UIKit
     var touchBeganInSwitchLayer = false
     var touchMoved = false
 
+    /// Init with coder.
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -95,12 +105,14 @@ import UIKit
         reloadLabelsTextColor()
     }
 
+    /// Layouts subviews. Should not be called directly.
     override public func layoutSubviews() {
         super.layoutSubviews()
         leftLabel.frame = CGRectMake(0, 0, bounds.size.width / 2, bounds.size.height)
         rightLabel.frame = CGRectMake(bounds.size.width / 2, 0, bounds.size.width / 2, bounds.size.height)
     }
 
+    /// Layouts sublayers of a layer. Should not be called directly.
     override public func layoutSublayersOfLayer(layer: CALayer) {
         super.layoutSublayersOfLayer(layer)
         guard layer == self.layer else {
@@ -117,6 +129,7 @@ import UIKit
         reloadSwitchLayerPosition()
     }
 
+    /// Touches began event handler. Should not be called directly.
     override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         touchBegan = true
@@ -124,6 +137,7 @@ import UIKit
         touchBeganInSwitchLayer = switchLayer.containsPoint(switchLayer.convertPoint(previousPoint!, fromLayer: layer))
     }
 
+    /// Touches moved event handler. Should not be called directly.
     override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesMoved(touches, withEvent: event)
         touchMoved = true
@@ -137,6 +151,7 @@ import UIKit
         previousPoint = point
     }
 
+    /// Touches ended event handler. Should not be called directly.
     override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesEnded(touches, withEvent: event)
         guard touchBegan else {
@@ -153,6 +168,7 @@ import UIKit
         touchMoved = false
     }
 
+    /// Touches cancelled event handler. Should not be called directly.
     override public func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
         super.touchesCancelled(touches, withEvent: event)
         previousPoint = nil
@@ -162,11 +178,13 @@ import UIKit
         touchMoved = false
     }
 
+    /// Returns the minimum size that fits a given size.
     override public func sizeThatFits(size: CGSize) -> CGSize {
         let labelSize = CGSizeMake((size.width - 3 * size.height / 2) / 2, size.height)
         return desiredSizeForLeftSize(leftLabel.sizeThatFits(labelSize), rightSize: rightLabel.sizeThatFits(labelSize))
     }
 
+    /// The minimum size used for Auto Layout.
     override public func intrinsicContentSize() -> CGSize {
         return desiredSizeForLeftSize(leftLabel.intrinsicContentSize(), rightSize: rightLabel.intrinsicContentSize())
     }
