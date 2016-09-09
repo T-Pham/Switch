@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2E3A851D82BE190005606A /* SwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E3A841D82BE190005606A /* SwitchTests.swift */; };
+		1B2E3A871D82BE190005606A /* Switch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7C39491D76C655001D07E3 /* Switch.framework */; };
 		1B7C394D1D76C655001D07E3 /* Switch.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B7C394C1D76C655001D07E3 /* Switch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B7C39551D76C6F7001D07E3 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C39541D76C6F7001D07E3 /* Switch.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1B2E3A881D82BE190005606A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B7C39401D76C655001D07E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B7C39481D76C655001D07E3;
+			remoteInfo = Switch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1B2E3A821D82BE190005606A /* SwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B2E3A841D82BE190005606A /* SwitchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTests.swift; sourceTree = "<group>"; };
+		1B2E3A861D82BE190005606A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7C39491D76C655001D07E3 /* Switch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Switch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7C394C1D76C655001D07E3 /* Switch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Switch.h; sourceTree = "<group>"; };
 		1B7C394E1D76C655001D07E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -19,6 +34,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B2E3A7F1D82BE190005606A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2E3A871D82BE190005606A /* Switch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B7C39451D76C655001D07E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +52,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B2E3A831D82BE190005606A /* SwitchTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B2E3A841D82BE190005606A /* SwitchTests.swift */,
+				1B2E3A861D82BE190005606A /* Info.plist */,
+			);
+			path = SwitchTests;
+			sourceTree = "<group>";
+		};
 		1B7C393F1D76C655001D07E3 = {
 			isa = PBXGroup;
 			children = (
 				1B7C394B1D76C655001D07E3 /* Switch */,
+				1B2E3A831D82BE190005606A /* SwitchTests */,
 				1B7C394A1D76C655001D07E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7C39491D76C655001D07E3 /* Switch.framework */,
+				1B2E3A821D82BE190005606A /* SwitchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +103,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1B2E3A811D82BE190005606A /* SwitchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B2E3A8A1D82BE190005606A /* Build configuration list for PBXNativeTarget "SwitchTests" */;
+			buildPhases = (
+				1B2E3A7E1D82BE190005606A /* Sources */,
+				1B2E3A7F1D82BE190005606A /* Frameworks */,
+				1B2E3A801D82BE190005606A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B2E3A891D82BE190005606A /* PBXTargetDependency */,
+			);
+			name = SwitchTests;
+			productName = SwitchTests;
+			productReference = 1B2E3A821D82BE190005606A /* SwitchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1B7C39481D76C655001D07E3 /* Switch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B7C39511D76C655001D07E3 /* Build configuration list for PBXNativeTarget "Switch" */;
@@ -93,9 +145,13 @@
 		1B7C39401D76C655001D07E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = TPM;
 				TargetAttributes = {
+					1B2E3A811D82BE190005606A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					1B7C39481D76C655001D07E3 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -114,11 +170,19 @@
 			projectRoot = "";
 			targets = (
 				1B7C39481D76C655001D07E3 /* Switch */,
+				1B2E3A811D82BE190005606A /* SwitchTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1B2E3A801D82BE190005606A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B7C39471D76C655001D07E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +193,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1B2E3A7E1D82BE190005606A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2E3A851D82BE190005606A /* SwitchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B7C39441D76C655001D07E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,7 +211,37 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1B2E3A891D82BE190005606A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B7C39481D76C655001D07E3 /* Switch */;
+			targetProxy = 1B2E3A881D82BE190005606A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1B2E3A8B1D82BE190005606A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SwitchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TPM.SwitchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1B2E3A8C1D82BE190005606A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SwitchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TPM.SwitchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		1B7C394F1D76C655001D07E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -269,6 +371,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B2E3A8A1D82BE190005606A /* Build configuration list for PBXNativeTarget "SwitchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B2E3A8B1D82BE190005606A /* Debug */,
+				1B2E3A8C1D82BE190005606A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1B7C39431D76C655001D07E3 /* Build configuration list for PBXProject "Switch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
