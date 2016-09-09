@@ -9,7 +9,9 @@
 
 # Switch
 
+[![CI Status](https://img.shields.io/travis/T-Pham/Switch/master.svg?style=flat-square)](https://travis-ci.org/T-Pham/Switch)
 [![GitHub issues](https://img.shields.io/github/issues/T-Pham/Switch.svg?style=flat-square)](https://github.com/T-Pham/Switch/issues)
+[![Codecov](https://img.shields.io/codecov/c/github/T-Pham/Switch.svg?style=flat-square)](https://codecov.io/gh/T-Pham/Switch)
 [![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/RoundedSwitch.svg?style=flat-square)](http://cocoadocs.org/docsets/RoundedSwitch)
 
 [![GitHub release](https://img.shields.io/github/tag/T-Pham/Switch.svg?style=flat-square&label=release)](https://github.com/T-Pham/Switch/releases)
