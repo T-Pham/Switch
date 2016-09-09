@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'RoundedSwitch'
-s.version          = '1.0.2'
+s.version          = '1.0.3'
 s.summary          = 'An iOS switch control implemented in Swift with full Interface Builder support.'
 s.description      = <<-DESC
 RoundedSwitch is an iOS switch control implemented in Swift with full Interface Builder support.

@@ -6,3 +6,6 @@ Fix - pod try does not work
 
 # v1.0.2
 Add documentation
+
+# v1.0.3
+Add some tests
