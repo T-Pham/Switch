@@ -9,3 +9,6 @@ Add documentation
 
 # v1.0.3
 Add some tests
+
+# v2.0.0
+Upgrade to Swift 3

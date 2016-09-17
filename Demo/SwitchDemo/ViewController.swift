@@ -21,19 +21,19 @@ class ViewController: UIViewController {
         mySwitch.leftText = "Windows"
         mySwitch.rightText = "Mac"
         mySwitch.rightSelected = true
-        mySwitch.tintColor = UIColor.purpleColor()
-        mySwitch.disabledColor = mySwitch.tintColor.colorWithAlphaComponent(0.2)
+        mySwitch.tintColor = UIColor.purple
+        mySwitch.disabledColor = mySwitch.tintColor.withAlphaComponent(0.2)
         mySwitch.sizeToFit()
-        mySwitch.addTarget(self, action: #selector(ViewController.switchDidChangeValue(_:)), forControlEvents: .ValueChanged)
+        mySwitch.addTarget(self, action: #selector(ViewController.switchDidChangeValue(_:)), for: .valueChanged)
         view.addSubview(mySwitch)
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        mySwitch.frame = CGRectApplyAffineTransform(sectionHeaderLabel.frame, CGAffineTransformMakeTranslation(0, sectionHeaderLabel.frame.size.height + 15))
+        mySwitch.frame = (sectionHeaderLabel.frame).applying(CGAffineTransform(translationX: 0, y: sectionHeaderLabel.frame.size.height + 15))
     }
 
-    @IBAction func switchDidChangeValue(theSwitch: Switch) {
+    @IBAction func switchDidChangeValue(_ theSwitch: Switch) {
         statusLabel.text = "\"\(theSwitch.rightSelected ? theSwitch.rightText ?? "" : theSwitch.leftText ?? "")\" selected"
     }
 }

@@ -36,16 +36,16 @@ class SwitchTests: XCTestCase {
     }
 
     func testDisabledColor() {
-        let color = UIColor.cyanColor()
+        let color = UIColor.cyan
         theSwitch.disabledColor = color
-        XCTAssert(CGColorEqualToColor(theSwitch.backgroundLayer.borderColor, color.CGColor))
+        XCTAssertEqual(theSwitch.backgroundLayer.borderColor, color.cgColor)
         XCTAssertEqual(theSwitch.rightLabel.textColor, color)
     }
 
     func testTintColor() {
-        let color = UIColor.purpleColor()
+        let color = UIColor.purple
         theSwitch.tintColor = color
-        XCTAssert(CGColorEqualToColor(theSwitch.switchLayer.borderColor, color.CGColor))
+        XCTAssertEqual(theSwitch.switchLayer.borderColor, color.cgColor)
         XCTAssertEqual(theSwitch.leftLabel.textColor, color)
     }
 }

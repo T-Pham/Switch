@@ -46,10 +46,10 @@ let mySwitch = Switch()
 mySwitch.leftText = "Windows"
 mySwitch.rightText = "Mac"
 mySwitch.rightSelected = true
-mySwitch.tintColor = UIColor.purpleColor()
-mySwitch.disabledColor = mySwitch.tintColor.colorWithAlphaComponent(0.2)
+mySwitch.tintColor = UIColor.purple
+mySwitch.disabledColor = mySwitch.tintColor.withAlphaComponent(0.2)
 mySwitch.sizeToFit()
-mySwitch.addTarget(self, action: #selector(ViewController.switchDidChangeValue(_:)), forControlEvents: .ValueChanged)
+mySwitch.addTarget(self, action: #selector(ViewController.switchDidChangeValue(_:)), for: .valueChanged)
 ```
 
 Please note that the module name is `Switch`. However, when installed with CocoaPods, it is `RoundedSwitch`.
@@ -77,6 +77,21 @@ pod 'RoundedSwitch'
 ### Manually
 
 Add the file [`Switch.swift`](Switch.swift) to your project. You are all set.
+
+## Compatibility
+From version 2.0.0, Swift 3 syntax is used. If your project is still using Swift version 2, please use a UITextField-Navigation version prior to 2.0.0.
+
+Podfile
+
+```ruby
+pod 'RoundedSwitch', '~> 1.0.3'
+```
+
+or Cartfile
+
+```ruby
+github "T-Pham/Switch" ~> 1.0.3
+```
 
 ## License
 
