@@ -48,4 +48,10 @@ class SwitchTests: XCTestCase {
         XCTAssertEqual(theSwitch.switchLayer.borderColor, color.cgColor)
         XCTAssertEqual(theSwitch.leftLabel.textColor, color)
     }
+    
+    func testSwitchBackgroundColor() {
+        let color = UIColor.purple
+        theSwitch.backColor = color
+        XCTAssertEqual(theSwitch.backgroundLayer.backgroundColor, color.cgColor)
+    }
 }

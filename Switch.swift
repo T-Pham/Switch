@@ -66,6 +66,13 @@ import UIKit
             reloadLabelsTextColor()
         }
     }
+    
+    /// The color used for switch background color. Transparent by default
+    @IBInspectable open var backColor: UIColor = UIColor.clear {
+        didSet {
+            backgroundLayer.backgroundColor = backColor.cgColor
+        }
+    }
 
     /// The color used for the selected text and the switch border.
     override open var tintColor: UIColor! {
