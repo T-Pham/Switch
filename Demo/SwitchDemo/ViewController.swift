@@ -22,7 +22,8 @@ class ViewController: UIViewController {
         mySwitch.rightText = "Mac"
         mySwitch.rightSelected = true
         mySwitch.tintColor = UIColor.purple
-        mySwitch.disabledColor = mySwitch.tintColor.withAlphaComponent(0.2)
+        mySwitch.disabledColor = mySwitch.tintColor.withAlphaComponent(0.4)
+        mySwitch.backColor = mySwitch.tintColor.withAlphaComponent(0.05)
         mySwitch.sizeToFit()
         mySwitch.addTarget(self, action: #selector(ViewController.switchDidChangeValue(_:)), for: .valueChanged)
         view.addSubview(mySwitch)
