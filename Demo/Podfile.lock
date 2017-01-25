@@ -1,5 +1,5 @@
 PODS:
-  - RoundedSwitch (2.0.0)
+  - RoundedSwitch (2.0.1)
 
 DEPENDENCIES:
   - RoundedSwitch (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  RoundedSwitch: f73f33f4d310432b776bcbd58123ad64206465cf
+  RoundedSwitch: bdd35542d36a60427e17035b1a88d701d0e61556
 
 PODFILE CHECKSUM: db41e24671e04bfa38a88dcc1ddb3c965daa2f51
 

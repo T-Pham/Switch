@@ -12,3 +12,6 @@ Add some tests
 
 # v2.0.0
 Upgrade to Swift 3
+
+# v2.0.1
+Add backColor property
