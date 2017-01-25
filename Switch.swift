@@ -59,15 +59,15 @@ import UIKit
         }
     }
 
-    /// The color used for the unselected text and the background border.
+    /// The color used for the unselected text and the border. The default value is light gray.
     @IBInspectable open var disabledColor: UIColor = UIColor.lightGray {
         didSet {
             backgroundLayer.borderColor = disabledColor.cgColor
             reloadLabelsTextColor()
         }
     }
-    
-    /// The color used for switch background color. Transparent by default
+
+    /// The color used for the switch background. Transparent by default.
     @IBInspectable open var backColor: UIColor = UIColor.clear {
         didSet {
             backgroundLayer.backgroundColor = backColor.cgColor
