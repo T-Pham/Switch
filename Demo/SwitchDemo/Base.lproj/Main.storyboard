@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,7 +55,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using Intrinsic Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Z1-Rh-4bt">
-                                <rect key="frame" x="16" y="156" width="151" height="21"/>
+                                <rect key="frame" x="16" y="156" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -87,6 +87,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Z1-Rh-4bt" secondAttribute="trailing" constant="20" symbolic="YES" id="2xo-xp-BMU"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t8h-5t-EMf" secondAttribute="trailing" constant="20" symbolic="YES" id="7dY-88-4Ag"/>
                             <constraint firstItem="64h-76-Wra" firstAttribute="top" secondItem="CpA-0v-keh" secondAttribute="bottom" constant="15" id="9Tc-n2-xXQ"/>
                             <constraint firstItem="Bkz-Ua-abU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9nf-eG-SmX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T0I-qk-XSd" secondAttribute="bottom" constant="15" id="BB8-Nw-5CQ"/>
