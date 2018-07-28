@@ -165,10 +165,18 @@ import UIKit
             return
         }
         previousPoint = nil
-        if touchMoved && touchBeganInSwitchLayer {
-            rightSelected = abs(switchLayerLeftPosition!.x - switchLayer.position.x) > abs(switchLayerRightPosition!.x - switchLayer.position.x)
-        } else if !touchMoved && !touchBeganInSwitchLayer {
-            rightSelected = !rightSelected
+        if touchBeganInSwitchLayer {
+            if touchMoved {
+                rightSelected = abs(switchLayerLeftPosition!.x - switchLayer.position.x) > abs(switchLayerRightPosition!.x - switchLayer.position.x)
+            }
+        } else {
+            let point = touches.first!.location(in: self)
+            let touchEndedInLayer = layer.contains(point)
+            let touchEndedInSwitchLayer = switchLayer.contains(switchLayer.convert(point, from: layer))
+            let touchEndedInInactiveSide = touchEndedInLayer && !touchEndedInSwitchLayer
+            if touchEndedInInactiveSide {
+                rightSelected = !rightSelected
+            }
         }
         touchBegan = false
         touchBeganInSwitchLayer = false
