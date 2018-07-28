@@ -15,3 +15,6 @@ Upgrade to Swift 3
 
 # v2.0.1
 Add backColor property
+
+# v2.0.2
+Fix - very hard to switch by tapping

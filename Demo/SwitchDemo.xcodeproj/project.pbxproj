@@ -103,7 +103,6 @@
 				1B7C395E1D76C807001D07E3 /* Frameworks */,
 				1B7C395F1D76C807001D07E3 /* Resources */,
 				E88D21E37375399AD6CFA4C9 /* [CP] Embed Pods Frameworks */,
-				3049A43E29347F1453C28128 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,21 +162,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3049A43E29347F1453C28128 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwitchDemo/Pods-SwitchDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3A1B13686E627E4007171510 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
