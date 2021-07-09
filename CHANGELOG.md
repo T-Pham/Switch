@@ -18,3 +18,6 @@ Add backColor property
 
 # v2.0.2
 Fix - very hard to switch by tapping
+
+# v3.0.0
+Update to Swift 5

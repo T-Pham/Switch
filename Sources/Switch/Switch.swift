@@ -23,10 +23,10 @@ import UIKit
     }
 
     /// The label on the left. Don't set the `textColor` and `text` properties on this label. Set them on the `leftText`, `tintColor` and `disabledColor` properties of the switch instead.
-    open let leftLabel = labelFactory()
+    public let leftLabel = labelFactory()
 
     /// The label on the right. Don't set the `textColor` and `text` properties on this label. Set them on the `rightText`, `tintColor` and `disabledColor` properties of the switch instead.
-    open let rightLabel = labelFactory()
+    public let rightLabel = labelFactory()
 
     /// Text for the label on the left. Setting this property instead of the `text` property of the `leftLabel` to trigger Auto Layout automatically.
     @IBInspectable open var leftText: String? {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RoundedSwitch
+import Switch
 
 class ViewController: UIViewController {
 

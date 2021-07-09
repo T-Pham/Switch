@@ -26,12 +26,6 @@
       location = "group:RoundedSwitch.podspec">
    </FileRef>
    <FileRef
-      location = "group:.swift-version">
-   </FileRef>
-   <FileRef
       location = "group:Package.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Demo/Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

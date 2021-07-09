@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,7 @@
 		1B7C396A1D76C807001D07E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7C39681D76C807001D07E3 /* Main.storyboard */; };
 		1B7C396C1D76C807001D07E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7C396B1D76C807001D07E3 /* Assets.xcassets */; };
 		1B7C396F1D76C807001D07E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7C396D1D76C807001D07E3 /* LaunchScreen.storyboard */; };
-		1B7C39771D76C8A3001D07E3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B7C39761D76C8A3001D07E3 /* Podfile */; };
-		784A86905D8FB0E4E07E7C93 /* Pods_SwitchDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C287FE7E6FBC6864E591A9 /* Pods_SwitchDemo.framework */; };
+		D69BE84B2698FEAB00F2563F /* Switch in Frameworks */ = {isa = PBXBuildFile; productRef = D69BE84A2698FEAB00F2563F /* Switch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +23,6 @@
 		1B7C396B1D76C807001D07E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B7C396E1D76C807001D07E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B7C39701D76C807001D07E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B7C39761D76C8A3001D07E3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		336C41C69A7344F86774E3D1 /* Pods-SwitchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwitchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwitchDemo/Pods-SwitchDemo.release.xcconfig"; sourceTree = "<group>"; };
-		83C287FE7E6FBC6864E591A9 /* Pods_SwitchDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwitchDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1152F7802E73F49E47E5C33 /* Pods-SwitchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwitchDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwitchDemo/Pods-SwitchDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				784A86905D8FB0E4E07E7C93 /* Pods_SwitchDemo.framework in Frameworks */,
+				D69BE84B2698FEAB00F2563F /* Switch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,11 +40,8 @@
 		1B7C39581D76C807001D07E3 = {
 			isa = PBXGroup;
 			children = (
-				1B7C39761D76C8A3001D07E3 /* Podfile */,
 				1B7C39631D76C807001D07E3 /* SwitchDemo */,
 				1B7C39621D76C807001D07E3 /* Products */,
-				DC50EE9C05F243DC74DC85E4 /* Pods */,
-				48A57B416A622A3E8D810259 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,23 +66,6 @@
 			path = SwitchDemo;
 			sourceTree = "<group>";
 		};
-		48A57B416A622A3E8D810259 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				83C287FE7E6FBC6864E591A9 /* Pods_SwitchDemo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DC50EE9C05F243DC74DC85E4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C1152F7802E73F49E47E5C33 /* Pods-SwitchDemo.debug.xcconfig */,
-				336C41C69A7344F86774E3D1 /* Pods-SwitchDemo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,17 +73,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B7C39731D76C807001D07E3 /* Build configuration list for PBXNativeTarget "SwitchDemo" */;
 			buildPhases = (
-				3A1B13686E627E4007171510 /* [CP] Check Pods Manifest.lock */,
 				1B7C395D1D76C807001D07E3 /* Sources */,
 				1B7C395E1D76C807001D07E3 /* Frameworks */,
 				1B7C395F1D76C807001D07E3 /* Resources */,
-				E88D21E37375399AD6CFA4C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwitchDemo;
+			packageProductDependencies = (
+				D69BE84A2698FEAB00F2563F /* Switch */,
+			);
 			productName = SwitchDemo;
 			productReference = 1B7C39611D76C807001D07E3 /* SwitchDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -120,24 +96,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = TPM;
 				TargetAttributes = {
 					1B7C39601D76C807001D07E3 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
 			buildConfigurationList = 1B7C395C1D76C807001D07E3 /* Build configuration list for PBXProject "SwitchDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
 			mainGroup = 1B7C39581D76C807001D07E3;
+			packageReferences = (
+				D69BE8492698FEAB00F2563F /* XCRemoteSwiftPackageReference "Switch" */,
+			);
 			productRefGroup = 1B7C39621D76C807001D07E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,51 +133,11 @@
 			files = (
 				1B7C396F1D76C807001D07E3 /* LaunchScreen.storyboard in Resources */,
 				1B7C396C1D76C807001D07E3 /* Assets.xcassets in Resources */,
-				1B7C39771D76C8A3001D07E3 /* Podfile in Resources */,
 				1B7C396A1D76C807001D07E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3A1B13686E627E4007171510 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwitchDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E88D21E37375399AD6CFA4C9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwitchDemo/Pods-SwitchDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RoundedSwitch/RoundedSwitch.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RoundedSwitch.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwitchDemo/Pods-SwitchDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B7C395D1D76C807001D07E3 /* Sources */ = {
@@ -236,6 +175,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -245,14 +185,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -277,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -291,6 +234,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -300,14 +244,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -326,10 +273,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -338,25 +286,31 @@
 		};
 		1B7C39741D76C807001D07E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1152F7802E73F49E47E5C33 /* Pods-SwitchDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwitchDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TPM.SwitchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		1B7C39751D76C807001D07E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 336C41C69A7344F86774E3D1 /* Pods-SwitchDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwitchDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TPM.SwitchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -382,6 +336,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D69BE8492698FEAB00F2563F /* XCRemoteSwiftPackageReference "Switch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/T-Pham/Switch";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D69BE84A2698FEAB00F2563F /* Switch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D69BE8492698FEAB00F2563F /* XCRemoteSwiftPackageReference "Switch" */;
+			productName = Switch;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B7C39591D76C807001D07E3 /* Project object */;
 }
