@@ -18,10 +18,9 @@
 [![Platform](https://img.shields.io/cocoapods/p/RoundedSwitch.svg?style=flat-square)](https://github.com/T-Pham/Switch)
 [![License](https://img.shields.io/cocoapods/l/Switch.svg?style=flat-square)](LICENSE)
 
+[![SwiftPM](https://img.shields.io/badge/SwiftPM-compatible-4BC51D.svg?style=flat-square)](https://swift.org/package-manager)
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
-
 [![CocoaPods](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg?style=flat-square)](https://cocoapods.org/pods/RoundedSwitch)
-[![CocoaPods downloads](https://img.shields.io/cocoapods/dt/RoundedSwitch.svg?style=flat-square)](https://cocoapods.org/pods/RoundedSwitch)
 
 ## Description
 
@@ -58,6 +57,15 @@ Please note that the module name is `Switch`. However, when installed with Cocoa
 Please see the [Reference Documentation](http://cocoadocs.org/docsets/RoundedSwitch) for details.
 
 ## Installation
+
+### [Swift Package Manager](https://swift.org/package-manager)
+
+In Xcode, select `File->Swift Packages->Add Package Dependency...` and follow the instructions on-screen.
+Use the following repo URL when prompted.
+
+```
+https://github.com/T-Pham/Switch
+```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
